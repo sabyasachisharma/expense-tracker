@@ -3,11 +3,13 @@ import { GlobalContext } from '../context/GlobalState';
 
 const Transaction = ({ transaction}) => {
     const { deleteTransactions } = useContext(GlobalContext);
-    const sign = transaction.amount < 0 ? '-' : '+';
     return (
-        <li className={transaction.amount < 0 ? "minus" : "plus"}>
-            {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span><button onClick={() => deleteTransactions(transaction.id)}className="delete-btn">x</button>
-        </li>
+        <li className={ transaction.amount < 0 ? "minus" : "plus"}>
+        <span className="transaction-text">{transaction.text}</span>
+        <span className="transaction-amount">{transaction.amount < 0 ? "-" : "+"}${Math.abs(transaction.amount)}</span>
+        <button className="delete-btn" onClick={() => deleteTransactions(transaction.id)}>x</button>
+    </li>
+
     )
 }
 
