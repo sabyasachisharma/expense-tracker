@@ -6,7 +6,8 @@ export const GlobalContext = createContext();
 
 // Provider component
 export const GlobalProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(AppReducer, { transactions: [] });
+    const [state, dispatch] = useReducer(AppReducer, { 
+        transactions: []});
 
     // Actions
     function deleteTransactions(id) {

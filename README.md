@@ -27,6 +27,7 @@ The primary goal of this project is to:
 ## Features
 
 - Add, edit, and delete expense entries.
+- Authentication Suprabase
 - Categorize expenses (e.g., Food, Transport, Shopping, etc.).
 - View total expenses and breakdown by category.
 - Responsive design for desktop and mobile use.
