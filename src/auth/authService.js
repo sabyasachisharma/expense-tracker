@@ -3,7 +3,10 @@ import { supabase } from './supabaseClient';
 // Sign up a user
 export const signUp = async (email, password) => {
   const { data, error } = await supabase.auth.signUp({ email, password });
-  if (error) throw error;
+  if (error) {
+    console.error('error', error);
+    throw error;
+  }
   return data.user;
 };
 
